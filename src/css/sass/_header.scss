@@ -1,0 +1,28 @@
+//Header
+
+.Header{
+	width: 100%;
+	.u-centrar{
+		height: 79px;
+	}
+
+	&-logo{
+		display: inline-block;
+		text-decoration: none;
+
+		img{
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		h1{
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			margin: -1px;
+			padding: 0;
+			overflow: hidden;
+			border: 0;			
+		}
+	}
+}

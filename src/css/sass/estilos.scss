@@ -1,0 +1,132 @@
+//Normalize
+@import "normalize";
+
+//Mixins
+@import "mixins";
+
+//Fuentes
+@font-face{
+	font-family:"Open Sans";
+	src: url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+}
+@font-face{
+	font-family:"Open Sans";
+	src: url(../assets/fonts/OpenSans-Regular.ttf);
+	font-weight: 400;
+}
+@font-face{
+	font-family:"Open Sans";
+	src: url(../assets/fonts/OpenSans-SemiBold.ttf);
+	font-weight: 600;
+}
+
+//---------------------------------------------------------------------
+// COLORES
+//---------------------------------------------------------------------
+
+$rojoAngular: #D32F2F;
+$rojoAngularOsc: #C62828;
+$gris: #7a7a7a;
+$grisClaro: #ccc;
+$grisClaro2: #eee;
+$grisOscuro: #585858;
+$negroClaro: #444;
+$whitelight: #f7f7f7;
+
+//---------------------------------------------------------------------
+// ESTILOS GENERALES
+//---------------------------------------------------------------------
+
+html{
+	position: relative;
+	min-height: 100%;
+	font-size: 16px;
+	font-family:"Open Sans", sans-serif;
+}
+
+// body{
+// 	margin-bottom: 180px;//para que el footer no tape contenido
+// }
+
+img{
+	max-width: 100%;
+	height: auto;
+	vertical-align: bottom; //quita el margen raro abajo de la img
+}
+
+.btn{
+	display: block;
+	max-width: 120px;
+	margin: 0 auto;
+	padding: 15px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: $negroClaro;
+	background-color: white;
+	cursor: pointer;
+	transition: all 300ms;
+
+	&-success{
+		background-color: #179613;
+		font-weight: bold;
+		color: white;
+		
+		&:hover{
+			background-color: #0e5b0b;
+		}
+	}
+}
+
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+//---------------------------------------------------------------------
+// UTILIDADES (REUSABLE CLASES)
+//---------------------------------------------------------------------
+
+.u-centrar{
+	margin: 0 auto;
+	text-align: center;
+	max-width: 1440px;
+}
+
+.u-subtitle{
+	padding-bottom: 10px;
+	// font-size: pxTOem(38px);
+	font-size: pxTOem(28px);
+	border-bottom: 1px solid $grisClaro2;
+}
+
+//---------------------------------------------------------------------
+// COMPONENTES
+//---------------------------------------------------------------------
+
+//Formularios
+// @import "form";
+
+/*HEADER*/
+@import "header";
+
+/*MENU*/
+// @import "menu";
+
+/*SLIDER*/
+// @import "slider";
+
+/*MAIN*/
+// @import "main";
+
+/*ARTICLE*/
+// @import "article";
+
+/*ASIDE*/
+// @import "aside";
+
+/*FOOTER*/
+// @import "footer";
+
+/*RESPONSIVE*/
+// @import "responsive";

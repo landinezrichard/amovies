@@ -1,0 +1,25 @@
+{
+  "name": "amovies",
+  "version": "1.0.0",
+  "description": "Maqueta página de peliculas",
+  "main": "gulpfile.js",
+  "scripts": {
+	"start": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/landinezrichard/amovies.git"
+  },
+  "author": "Ricardo Landínez <landinezrichard@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/landinezrichard/amovies/issues"
+  },
+  "homepage": "https://github.com/landinezrichard/amovies#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
+  }
+}
