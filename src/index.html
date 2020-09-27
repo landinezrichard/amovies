@@ -9,7 +9,7 @@
 <body>
 	<!-- HEADER -->
 	<header class="Header">
-		<div class="u-centrar">
+		<div class="u-centrar clearfix">
 			<!-- LOGO -->
 			<a class="Header-logo"  href="index.html">
 				<img src="assets/img/logo.png" alt="Logo Ariadna Movies" />
@@ -48,7 +48,7 @@
 		<!-- Filter Elements -->
 		<!-- Control buttons -->
 		<div class="Filter">
-			<button class="tab active">All</button>
+			<button class="tab tab-active">All</button>
 			<button class="tab">New Releases</button>
 			<button class="tab">Most Popular</button>
 			<button class="tab">Trends</button>
@@ -59,10 +59,12 @@
 		<section class="Movies">
 			<article class="Movies-item">
 				<img src="assets/img/thumbnails/bohemian-rhapsody.jpg" alt="Bohemian Rhapsody">
-				<div class="middle">
-					<h3>Bohemian Rhapsody</h3>
-					<a href="#" class="btn">Warch Now</a>
-					<a href="#" class="btn">More Info</a>
+				<div class="overlay">
+					<div class="middle">
+						<h3>Bohemian Rhapsody</h3>
+						<a href="#" class="btn btn-on">Watch Now</a>
+						<a href="#" class="btn">More Info</a>
+					</div>
 				</div>
 				
 			</article>
@@ -71,7 +73,7 @@
 	<!-- FOOTER -->
 	<footer class="Footer">
 		<div class="u-centrar">
-			<p class="Footer-copy">&copy;Diseño por Ariadna Comunications Group y desarrollo por Ricardo Landínez</p>
+			<p class="Footer-copy">&copy;Diseño por <a href="https://www.ariadnacommunicationsgroup.com/" target="_blank">Ariadna Comunications Group </a> y desarrollo por Ricardo Landínez</p>
 		</div>
 	</footer>
 </body>

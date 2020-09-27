@@ -71,11 +71,18 @@ img{
 	transition: all 300ms;
 
 	&:hover{
-		background-color: $amarillo;
+		background-color: black;
 		font-weight: bold;
-		color: black;
-		border: 1px solid black;
+		color: $amarillo;
+		border: 1px solid $amarillo;
 	}
+
+	// &:hover{
+	// 	background-color: $amarillo;
+	// 	font-weight: bold;
+	// 	color: black;
+	// 	border: 1px solid black;
+	// }
 
 	&-on{
 		background-color: $amarillo;
@@ -89,16 +96,6 @@ img{
 		}
 	}
 
-}
-
-.tab{
-	font-size: pxTOem(20px);
-	color: black;
-	font-weight: 600;
-	background-color: inherit;
-	border: none;
-	outline: none;
-	cursor: pointer;
 }
 
 .clearfix::after {
@@ -115,13 +112,6 @@ img{
 	margin: 0 auto;
 	text-align: center;
 	max-width: 1440px;
-}
-
-.u-subtitle{
-	padding-bottom: 10px;
-	// font-size: pxTOem(38px);
-	font-size: pxTOem(28px);
-	// border-bottom: 1px solid $grisClaro2;
 }
 
 //---------------------------------------------------------------------
@@ -141,16 +131,10 @@ img{
 @import "slider";
 
 /*MAIN*/
-// @import "main";
-
-/*ARTICLE*/
-// @import "article";
-
-/*ASIDE*/
-// @import "aside";
+@import "main";
 
 /*FOOTER*/
-// @import "footer";
+@import "footer";
 
 /*RESPONSIVE*/
 // @import "responsive";

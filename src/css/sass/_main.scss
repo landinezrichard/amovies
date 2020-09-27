@@ -1,0 +1,108 @@
+//MAIN
+
+.Filter{
+	margin: 80px 0 28px;
+	text-align: left;
+
+	.tab{
+		position: relative;
+		padding: 10px 17px;
+		// padding-bottom: 10px;
+		font-size: pxTOem(20px);
+		color: black;
+		font-weight: 600;
+		background-color: inherit;
+		border: none;
+		outline: none;
+		cursor: pointer;
+		transition: all 300ms;
+
+		&:hover{
+			font-weight: 700;			
+			border-bottom: 3px solid $amarillo;
+
+			&:after{
+				content: "";
+				position: absolute;
+				border-left: 10px solid transparent;
+				border-right: 10px solid transparent;
+				display: inline-block;
+				bottom: -12px;
+				left: 50%;
+				top: 114%;
+				transform: translate(-50%, -50%);
+				border-top: 10px solid $amarillo;
+			}
+			
+		}
+		
+
+		&-active{
+			border-bottom: 3px solid black;
+
+			// triangulo estilo bocadillo comic
+			// "border-Top" controla el alto del triangulo
+			// La suma de "border-left" y "border-right" nos indican el ancho del triangulo
+			&:after{
+				content: "";
+				position: absolute;
+				border-left: 10px solid transparent;
+				border-right: 10px solid transparent;
+				border-top: 10px solid black;
+				display: inline-block;
+				bottom: -12px;
+				left: 50%;
+				top: 114%;
+				transform: translate(-50%, -50%);
+			}
+
+		}
+	}
+}
+
+.Movies{
+	&-item{
+		position: relative;
+		display: inline-block;
+		max-width: 349px;
+		background-color: #d2d2d2;
+
+		img{
+			opacity: 1;
+			transition: .5s ease;
+		}
+
+		.overlay{
+			width: 100%;
+			height: 100%;
+			transition: .5s ease;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: rgba(0, 0, 0, 0.5);
+			transform: scale(0);
+		}
+
+		.middle{
+			position: absolute;			
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);			
+
+			h3{
+				font-size: pxTOem(30px);
+				text-transform: uppercase;
+				color: white;
+			}
+
+			.btn{
+				margin: 8px 0;
+			}
+		}
+
+		&:hover .overlay{
+			transform: scale(1);
+		}
+	}
+}
