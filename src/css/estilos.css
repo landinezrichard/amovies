@@ -305,7 +305,7 @@ template {
 
 @font-face {
   font-family: "Open Sans";
-  src: url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"); }
+  src: url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"); }
 
 @font-face {
   font-family: "Open Sans";
@@ -316,6 +316,11 @@ template {
   font-family: "Open Sans";
   src: url(../assets/fonts/OpenSans-SemiBold.ttf);
   font-weight: 600; }
+
+@font-face {
+  font-family: "Open Sans";
+  src: url(../assets/fonts/OpenSans-Bold.ttf);
+  font-weight: 700; }
 
 html {
   position: relative;
@@ -329,22 +334,42 @@ img {
   vertical-align: bottom; }
 
 .btn {
-  display: block;
-  max-width: 120px;
+  display: inline-block;
+  width: 200px;
+  height: 44px;
+  line-height: 44px;
   margin: 0 auto;
-  padding: 15px;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  color: #444;
-  background-color: white;
+  font-weight: 700;
+  color: white;
+  background-color: transparent;
   cursor: pointer;
+  border: 1px solid white;
   transition: all 300ms; }
-  .btn-success {
-    background-color: #179613;
+  .btn:hover {
+    background-color: #f1f400;
     font-weight: bold;
-    color: white; }
-    .btn-success:hover {
-      background-color: #0e5b0b; }
+    color: black;
+    border: 1px solid black; }
+  .btn-on {
+    background-color: #f1f400;
+    font-weight: bold;
+    color: black; }
+    .btn-on:hover {
+      background-color: black;
+      color: #f1f400;
+      border: 1px solid #f1f400; }
+
+.tab {
+  font-size: 1.25rem;
+  color: black;
+  font-weight: 600;
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer; }
 
 .clearfix::after {
   content: "";
@@ -358,19 +383,22 @@ img {
 
 .u-subtitle {
   padding-bottom: 10px;
-  font-size: 1.75rem;
-  border-bottom: 1px solid #eee; }
+  font-size: 1.75rem; }
 
 /*HEADER*/
 .Header {
-  width: 100%; }
+  width: 100%;
+  background-color: white; }
   .Header .u-centrar {
-    height: 79px; }
+    height: 79px;
+    line-height: 79px; }
   .Header-logo {
-    display: inline-block;
+    float: left;
+    width: 178px;
     text-decoration: none; }
     .Header-logo img {
       display: inline-block;
+      width: 177px;
       vertical-align: middle; }
     .Header-logo h1 {
       position: absolute;
@@ -382,7 +410,72 @@ img {
       border: 0; }
 
 /*MENU*/
+.Menu {
+  float: right; }
+  .Menu-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    font-weight: 600; }
+    .Menu-list li {
+      display: inline-block;
+      height: 100%;
+      min-width: 86px; }
+      .Menu-list li a {
+        display: inline-block;
+        width: auto;
+        padding: 0 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: black;
+        transition: all 300ms; }
+        .Menu-list li a:hover {
+          background-color: #f1f400; }
+        .Menu-list li a.active {
+          background-color: #f1f400; }
+        .Menu-list li a.login {
+          background-color: #eeeeee;
+          font-weight: 700; }
+          .Menu-list li a.login:hover {
+            background-color: black;
+            color: #f1f400; }
+
 /*SLIDER*/
+.Slider {
+  width: 100%; }
+  .Slider-item {
+    position: relative; }
+  .Slider picture {
+    max-width: 100%;
+    height: auto; }
+  .Slider .u-centrar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+  .Slider-text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    color: white;
+    text-align: left;
+    max-width: 33%; }
+    .Slider-text h2 {
+      font-size: 4.5rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin: 55px 0; }
+    .Slider-text p {
+      font-size: 1.125rem;
+      font-weight: 400;
+      margin: 0 0 57px; }
+    .Slider-text .btn + .btn {
+      margin-left: 10px; }
+
 /*MAIN*/
 /*ARTICLE*/
 /*ASIDE*/

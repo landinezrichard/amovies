@@ -18,10 +18,10 @@
 			<!-- MENU -->
 			<nav class="Menu">
 				<ul class="Menu-list">
-					<li><a href="index.html">Home</a></li>
+					<li><a class="active" href="index.html">Home</a></li>
 					<li><a href="#">Categories</a></li>
 					<li><a href="#">My Favorites</a></li>
-					<li><a href="#">Sign In</a></li>
+					<li><a class="login" href="#">Sign In</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -29,25 +29,31 @@
 	<!-- Slider -->
 	<div class="Slider">
 		<div class="Slider-item">
-			<div class="Slider-text">
-				<h2>Aquaman</h2>
-				<p>Arthur Curry learns that he is the heir of the underwater kingdom of Atlantis. This will become Aquaman, the emperor of Atlantis, committed to defending the entire planet, both on land and in the seas.</p>
-				<a href="#" class="btn">Warch Now</a>
-				<a href="#" class="btn">More Info</a>
+			<picture>
+				<source media="(max-width:750px)" srcset="assets/img/banners/banner-aquaman-mob.jpg">
+				<img src="assets/img/banners/banner-aquaman.jpg" alt="">
+			</picture>
+			<div class="u-centrar">
+				<div class="Slider-text">
+					<h2>Aquaman</h2>
+					<p>Arthur Curry learns that he is the heir of the underwater kingdom of Atlantis. This will become Aquaman, the emperor of Atlantis, committed to defending the entire planet, both on land and in the seas.</p>
+					<a href="#" class="btn btn-on">Watch Now</a>
+					<a href="#" class="btn">More Info</a>
+				</div>
 			</div>
 		</div>
 	</div>
 	<!-- Main -->
-	<main>
+	<main class="u-centrar">
 		<!-- Filter Elements -->
 		<!-- Control buttons -->
 		<div class="Filter">
-			<button class="btn active">All</button>
-			<button class="btn">New Releases</button>
-			<button class="btn">Most Popular</button>
-			<button class="btn">Trends</button>
-			<button class="btn">My Favorites</button>
-			<button class="btn">Recommendations</button>
+			<button class="tab active">All</button>
+			<button class="tab">New Releases</button>
+			<button class="tab">Most Popular</button>
+			<button class="tab">Trends</button>
+			<button class="tab">My Favorites</button>
+			<button class="tab">Recommendations</button>
 		</div>
 
 		<section class="Movies">

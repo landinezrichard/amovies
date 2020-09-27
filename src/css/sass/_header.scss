@@ -2,16 +2,22 @@
 
 .Header{
 	width: 100%;
+	background-color: white;
+	
 	.u-centrar{
 		height: 79px;
+		line-height: 79px;
 	}
 
 	&-logo{
-		display: inline-block;
+		float: left;
+		width: 178px;
+		// display: inline-block;
 		text-decoration: none;
 
 		img{
 			display: inline-block;
+			width: 177px;
 			vertical-align: middle;
 		}
 
