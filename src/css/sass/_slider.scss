@@ -2,14 +2,22 @@
 
 .Slider{
 	width: 100%;
+	position: relative;
+
+	&-container{
+		width: 100%;
+	}
+	// width: 1920px;
+	// height: 700px;
 
 	&-item{
 		position: relative;
-	}
 
-	picture{
-		max-width: 100%;
-		height: auto;
+		picture{
+			max-width: 100%;
+			height: auto;
+		}
+
 	}
 
 	.u-centrar{
@@ -45,5 +53,42 @@
 		.btn + .btn{
 			margin-left: 10px;
 		}
+	}
+	.owl-dots{
+		position: absolute;
+		bottom: 40px;
+		right: 0;
+		z-index: 1000;
+
+		& button{
+			border: none !important;
+			outline: none !important;
+			width: 26px;
+			height: 26px;
+			line-height: 26px;
+			border-radius: 50%;
+			margin-left: 4px;
+			padding: 0;
+			background-color: transparent;
+			box-sizing: content-box;
+		}
+
+		.owl-dot.active span{
+			background-color: $amarillo;
+		}
+
+		.owl-dot.active{
+			border: 1px solid $amarillo !important;
+		}
+
+		& span{
+			display: inline-block;
+			width: 10px !important;
+			height: 10px !important;
+			padding: 0;
+			background-color: white;
+			border-radius: 50%;
+		}
+
 	}
 }

@@ -25,6 +25,14 @@
 	font-weight: 700;
 }
 
+/*OWL CAROUSEL*/
+@import "_owl.carousel.scss";
+@import "_owl.theme.default.scss";
+.item{
+	background-color: blue;
+	position: relative;
+}
+
 //---------------------------------------------------------------------
 // COLORES
 //---------------------------------------------------------------------
@@ -117,9 +125,6 @@ img{
 //---------------------------------------------------------------------
 // COMPONENTES
 //---------------------------------------------------------------------
-
-//Formularios
-// @import "form";
 
 /*HEADER*/
 @import "header";

@@ -4,7 +4,7 @@
   "description": "Maqueta página de peliculas",
   "main": "gulpfile.js",
   "scripts": {
-	"start": "gulp",
+    "start": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,5 +21,8 @@
     "browser-sync": "^2.26.12",
     "gulp": "^4.0.2",
     "gulp-sass": "^4.1.0"
+  },
+  "dependencies": {
+    "jquery": "^3.5.1"
   }
 }
