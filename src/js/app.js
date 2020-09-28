@@ -4,7 +4,6 @@ $.when( $.ready ).then(function() {
 
 	/*Mostrar Menu en Movil*/
 	$('.Menu-btn').on("click",function() {
-		// event.preventDefault();
 		$('.Menu').slideToggle();
 		$( this ).toggleClass("change");
 	});
@@ -14,29 +13,17 @@ $.when( $.ready ).then(function() {
 		items: 1,
 		loop: true,
 		dotsContainer: '#carousel-custom-dots',
-		// autoplay: true,
-		// autoplaySpeed:1000,
-		// smartSpeed:1500,
-		// autoPlayHoverPause: true
+		autoplay: true,
+		autoplaySpeed:1000,
+		smartSpeed:1500,
+		autoPlayHoverPause: true
 	});
 
 	$(".Filter").owlCarousel({
 		loop: false,
 		nav: false,
 		dots: false,
-		// center: true,
 		autoWidth:true,
-		// responsive:{
-		// 	0:{
-		// 		items:3
-		// 	},
-		// 	600:{
-		// 		items:4,
-		// 	},
-		// 	1000:{
-		// 		items:5
-		// 	}
-		// }
 	});
 
 	function hacerLista(title, imageSrc, cat, index){
@@ -119,7 +106,6 @@ $.when( $.ready ).then(function() {
 			filterSelection(cat);
 		});
 	}
-
-	// filterSelection("All");
+	
 	
 });
