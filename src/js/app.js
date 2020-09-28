@@ -13,9 +13,9 @@ $.when( $.ready ).then(function() {
 		autoPlayHoverPause: true
 	});
 
-	function hacerLista(title, imageSrc, cat){
+	function hacerLista(title, imageSrc, cat, index){
 		let plantilla= `
-			<article class="Movies-item" data-cat="${cat}">
+			<article class="Movies-item item-${index}" data-cat="${cat}">
 				<img src="${imageSrc}" alt="${title}">
 				<div class="overlay">
 					<div class="middle">
@@ -39,7 +39,7 @@ $.when( $.ready ).then(function() {
 			let title = movie.title;
 			let imageSrc = "assets/img/thumbnails/" + movie.image;
 			let cat = movie.cat;
-			moviesList.push( hacerLista(title, imageSrc, cat) );
+			moviesList.push( hacerLista(title, imageSrc, cat, index) );
 		});
 
 		// Insertar listado en la pág.
