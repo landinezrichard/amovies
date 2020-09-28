@@ -1,56 +1,99 @@
-/*Slider*/
-// let slider = (function() {
-// 	var st = {
-// 	  tabs: '.tabs',
-// 	  tabs_item: '.tabs_item',
-// 	  tabs_item_target: '.tabs_item_target'
-// 	};
-  
-// 	var dom = {}
-  
-// 	var catchDom = function() {
-// 	  dom.tabs_item_target = $(st.tabs_item_target, st.tabs);
-// 	};
-  
-// 	var suscribeEvents = function() {
-// 	  dom.tabs_item_target.on('click', events.eSelectedTab);
-// 	};
-  
-// 	var events = {
-// 	  eSelectedTab: function(e) {
-// 		self = $(this);
-// 		self.addClass('is_selected');
-// 		var brother = self.parent(st.tabs_item).siblings();
-// 		$(st.tabs_item_target, brother).removeClass('is_selected');
-// 		var pane = self.attr('data-tab');
-// 		$("#" + pane).addClass('is_active');
-// 		$("#" + pane).siblings().removeClass('is_active');
-// 	  }
-// 	};
-  
-// 	var initialize = function() {
-// 	  catchDom();
-// 	  suscribeEvents();
-// 	};
-  
-// 	return {
-// 	  init: initialize
-// 	}
-//   })();
-  
-// tabs.init();
 
 $.when( $.ready ).then(function() {
 	// Document is ready.
 
+	//SLIDER
 	$('.Slider-container').owlCarousel({
 		items: 1,
 		loop: true,
 		dotsContainer: '#carousel-custom-dots',
-		// autoplay: true,
-		// autoplaySpeed:1000,
-		// smartSpeed:1500,
-		// autoPlayHoverPause: true
+		autoplay: true,
+		autoplaySpeed:1000,
+		smartSpeed:1500,
+		autoPlayHoverPause: true
 	});
+
+	function hacerLista(title, imageSrc, cat){
+		let plantilla= `
+			<article class="Movies-item" data-cat="${cat}">
+				<img src="${imageSrc}" alt="${title}">
+				<div class="overlay">
+					<div class="middle">
+						<h3>${title}</h3>
+						<a href="#" class="btn btn-on">Watch Now</a>
+						<a href="#" class="btn">More Info</a>
+					</div>
+				</div>
+				
+			</article>
+		`;
+
+		return plantilla;
+	}
+
+	// obtener datos JSON
+	$.getJSON( "js/ajax/test.json", function( data ) {
+		let moviesList = [];
+		// Crear listado peliculas
+		$.each(data.movies, function(index,movie){		
+			let title = movie.title;
+			let imageSrc = "assets/img/thumbnails/" + movie.image;
+			let cat = movie.cat;
+			moviesList.push( hacerLista(title, imageSrc, cat) );
+		});
+
+		// Insertar listado en la pág.
+		$(".Movies").append( moviesList.join( "" ) );
+		
+	});
+
+	// Filtrar Peliculas
+	
+	function filterSelection(cat) {
+		let items;
+		items =  $(".Movies-item");
+		if (cat == "All"){
+			for (let i = 0; i < items.length; i++) {
+				RemoveClass(items[i], "hide");				
+			}
+		}else{
+			for (let i = 0; i < items.length; i++) {
+				let item = items[i];
+				let categoryList = $(item).data("cat").split(",");
+				// Add the "hide" class (display:none) to the filtered elements
+				if(categoryList.indexOf(cat) == -1){
+					AddClass(item, "hide");
+				}else{
+					RemoveClass(item, "hide");
+				}
+			}
+			
+			
+		}
+	}
+	
+	function AddClass(element, name) {
+		$(element).addClass(name);
+	}
+	
+	function RemoveClass(element, name) {
+		$(element).removeClass(name);
+	}	
+	
+	let btnContainer = $(".Filter");
+	let btns = $(".tab");
+	for (let i = 0; i < btns.length; i++) {
+		btns[i].addEventListener("click", function() {
+			// Add active class to the current control button (highlight it)
+			let current = $(".tab-active");
+			current[0].className = current[0].className.replace(" tab-active", "");
+			this.className += " tab-active";
+
+			let cat = $( this ).data("cat");
+			filterSelection(cat);
+		});
+	}
+
+	// filterSelection("All");
 	
 });

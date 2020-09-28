@@ -1,0 +1,52 @@
+{
+	"movies": [
+		{
+			"title": "Bohemian Rhapsody",
+			"image": "bohemian-rhapsody.jpg",
+			"url": "#",
+			"cat": "Most Popular,My Favorites,Trends"
+		},
+		{
+			"title": "Venom",
+			"image": "venom.jpg",
+			"url": "#",
+			"cat": "Recommendations"
+		},
+		{
+			"title": "Avengers Infinity War",
+			"image": "avengers-infinity-war.png",
+			"url": "#",
+			"cat": "Most Popular,My Favorites,Trends"
+		},
+		{
+			"title": "First Man",
+			"image": "first-man.jpg",
+			"url": "#",
+			"cat": "New Releases"
+		},
+		{
+			"title": "Han Solo",
+			"image": "han-solo.jpg",
+			"url": "#",
+			"cat": "Most Popular,Recommendations,New Releases"
+		},
+		{
+			"title": "Incredibles 2",
+			"image": "incredibles.jpg",
+			"url": "#",
+			"cat": "Most Popular,Trends"
+		},
+		{
+			"title": "Jurassic World",
+			"image": "jurassic-world.jpg",
+			"url": "#",
+			"cat": "Most Popular,My Favorites,New Releases,Trends"
+		},
+		{
+			"title": "Deadpool",
+			"image": "deadpool.png",
+			"url": "#",
+			"cat": "My Favorites,Trends"
+		}
+	]
+}

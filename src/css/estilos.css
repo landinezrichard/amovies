@@ -806,10 +806,12 @@ img {
         transform: translate(-50%, -50%); }
 
 .Movies-item {
+  margin: 18px 0;
   position: relative;
   display: inline-block;
   max-width: 349px;
-  background-color: #d2d2d2; }
+  background-color: #d2d2d2;
+  /* The "show" class is added to the filtered elements */ }
   .Movies-item img {
     opacity: 1;
     transition: .5s ease; }
@@ -836,6 +838,8 @@ img {
       margin: 8px 0; }
   .Movies-item:hover .overlay {
     transform: scale(1); }
+  .Movies-item.hide {
+    display: none; }
 
 /*FOOTER*/
 .Footer {
