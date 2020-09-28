@@ -3,15 +3,25 @@
 .Header{
 	width: 100%;
 	background-color: white;
+	// background-color: $transparent_white;
+	//aca menu
+	overflow: auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
 	
 	.u-centrar{
 		height: 79px;
 		line-height: 79px;
+		text-align: right;
 	}
 
 	&-logo{
 		float: left;
 		width: 178px;
+		margin-left: 10px;
 		text-decoration: none;
 
 		img{

@@ -2,6 +2,13 @@
 $.when( $.ready ).then(function() {
 	// Document is ready.
 
+	/*Mostrar Menu en Movil*/
+	$('.Menu-btn').on("click",function() {
+		// event.preventDefault();
+		$('.Menu').slideToggle();
+		$( this ).toggleClass("change");
+	});
+
 	//SLIDER
 	$('.Slider-container').owlCarousel({
 		items: 1,

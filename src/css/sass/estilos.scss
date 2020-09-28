@@ -40,6 +40,8 @@
 $amarillo: #f1f400;
 $lightGray: #eeeeee;
 $negroClaro: #444;
+$transparent_black : rgba(0,0,0,.5);
+$transparent_white : rgba(255, 255, 255, 0.7);
 
 //---------------------------------------------------------------------
 // ESTILOS GENERALES
@@ -142,4 +144,4 @@ img{
 @import "footer";
 
 /*RESPONSIVE*/
-// @import "responsive";
+@import "responsive";
