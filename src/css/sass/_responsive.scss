@@ -9,16 +9,35 @@
 	// 1440px
 	// 1600px
 
+@media screen and (min-width: 550px){
+	.Slider{
+		&-text{			
+			top: 60%;			
+		}
+	}
+}
+
+@media screen and (min-width: 600px){
+	.Slider{
+		&-text{			
+			top: 65%;			
+		}
+	}
+}
+
 @media screen and (min-width:700px){
 	.Header{
 		&-logo{
-			margin-left: 0;
+			margin-left: 7px;
 		}
 	}
+	
 	.Menu{
-		display: inline-block !important;
+		display: block !important;
 		width: auto;
 		height: auto;
+		margin-left: 5px;
+		margin-right: 0;
 
 		.u-centrar{
 			text-align: center;
@@ -39,15 +58,24 @@
 			}
 		}
 	}
+
+	.Slider{
+		&-text{			
+			top: 70%;			
+		}
+	}
 }
 
 @media screen and (min-width:751px){
+	
 	.Slider{
 		&-text{
 			margin-left: 30px;
+			top: 50%;
 			left: 0;
 			transform: translate(0, -50%);
 			max-width: 70%;
+			text-align: left;
 
 			h2{
 				font-size: pxTOem(36px);
@@ -57,20 +85,54 @@
 			p{
 				margin: 0 0 28px;
 			}
+
+			.btn{
+				width: 200px;
+			}
+		}
+		.owl-dots{
+			width: auto;
+			right: 0;
+		}
+	}
+
+	.Movies{
+		width: calc(100% - 10px);
+		margin: 0 10px;
+		&-item{
+			max-width: 318px;
 		}
 	}
 }
 
 @media screen and (min-width:840px){
+	.Header{
+		&-logo{
+			margin-left: 15px;
+		}
+	}
+
 	.Slider{
 		&-text{
 			margin-left: 15px;
 			max-width: 60%;
 		}
 	}
+
+	.Movies{
+		&-item{
+			max-width: 349px;
+		}
+	}
 }
 
 @media screen and (min-width:1280px){
+	.Header{
+		&-logo{
+			margin-left: 10px;
+		}
+	}
+	
 	.Slider{
 		&-text{
 			h2{
@@ -79,10 +141,30 @@
 			}
 		}
 	}
+
+	.Filter{
+		width: calc(100% - 20px);
+		margin: 80px 10px 28px;
+	}
+
+	.Movies{
+		width: 100%;
+		margin: 0;
+	}
 }
 
 
 @media screen and (min-width:1440px){
+	.Header{
+		&-logo{
+			margin-left: 0;
+		}
+	}
+
+	.Menu{
+		margin-right: 0;
+	}
+
 	.Slider{
 		&-text{
 			margin-left: 0;

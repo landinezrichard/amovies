@@ -3,8 +3,6 @@
 .Header{
 	width: 100%;
 	background-color: white;
-	// background-color: $transparent_white;
-	//aca menu
 	overflow: auto;
 	position: fixed;
 	top: 0;
@@ -21,7 +19,7 @@
 	&-logo{
 		float: left;
 		width: 178px;
-		margin-left: 10px;
+		margin-left: 20px;
 		text-decoration: none;
 
 		img{

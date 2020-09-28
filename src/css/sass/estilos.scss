@@ -54,9 +54,9 @@ html{
 	font-family:"Open Sans", sans-serif;
 }
 
-// body{
-// 	margin-bottom: 180px;//para que el footer no tape contenido
-// }
+body{
+	margin-bottom: 100px;//para que el footer no tape contenido
+}
 
 img{
 	max-width: 100%;
@@ -86,13 +86,6 @@ img{
 		color: $amarillo;
 		border: 1px solid $amarillo;
 	}
-
-	// &:hover{
-	// 	background-color: $amarillo;
-	// 	font-weight: bold;
-	// 	color: black;
-	// 	border: 1px solid black;
-	// }
 
 	&-on{
 		background-color: $amarillo;

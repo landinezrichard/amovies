@@ -14,10 +14,29 @@ $.when( $.ready ).then(function() {
 		items: 1,
 		loop: true,
 		dotsContainer: '#carousel-custom-dots',
-		autoplay: true,
-		autoplaySpeed:1000,
-		smartSpeed:1500,
-		autoPlayHoverPause: true
+		// autoplay: true,
+		// autoplaySpeed:1000,
+		// smartSpeed:1500,
+		// autoPlayHoverPause: true
+	});
+
+	$(".Filter").owlCarousel({
+		loop: false,
+		nav: false,
+		dots: false,
+		// center: true,
+		autoWidth:true,
+		// responsive:{
+		// 	0:{
+		// 		items:3
+		// 	},
+		// 	600:{
+		// 		items:4,
+		// 	},
+		// 	1000:{
+		// 		items:5
+		// 	}
+		// }
 	});
 
 	function hacerLista(title, imageSrc, cat, index){
